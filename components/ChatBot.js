@@ -6,16 +6,16 @@ const ChatBot = () => {
     MessengerRef.current.setAttribute('page_id', '172082352647924')
     MessengerRef.current.setAttribute('attribution', 'biz_inbox')
 
-    window.fbAsyncInit = function () {
+    window.fbAsyncInit = () => {
       window.FB.init({
         xfbml: true,
-        version: 'v16.0',
+        version: 'v16.0'
       })
     }
-    (function (d, s, id) {
-      let fjs = d.getElementsByTagName(s)[0]
+    ((d, s, id) => {
+      const fjs = d.getElementsByTagName(s)[0]
       if (d.getElementById(id)) return
-      let js = d.createElement(s)
+      const js = d.createElement(s)
       js.id = id
       js.src = 'https://connect.facebook.net/zh_CN/sdk/xfbml.customerchat.js'
       fjs.parentNode.insertBefore(js, fjs)
