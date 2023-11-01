@@ -20,7 +20,7 @@ import ExternalScript from '@/components/ExternalScript'
 // 各种扩展插件 动画等
 const ExternalPlugins = dynamic(() => import('@/components/ExternalPlugins'))
 // Messager
-import ExternalScript from '@/components/ChatBot'
+import ChatBot from '@/components/ChatBot'
 
 const MyApp = ({ Component, pageProps }) => {
   useEffect(() => {
