@@ -19,6 +19,8 @@ import dynamic from 'next/dynamic'
 import ExternalScript from '@/components/ExternalScript'
 // 各种扩展插件 动画等
 const ExternalPlugins = dynamic(() => import('@/components/ExternalPlugins'))
+// Messager
+import ChatBot from '@/components/ChatBot'
 
 const MyApp = ({ Component, pageProps }) => {
   useEffect(() => {
@@ -30,6 +32,7 @@ const MyApp = ({ Component, pageProps }) => {
             <ExternalScript />
             <Component {...pageProps} />
             <ExternalPlugins {...pageProps} />
+            <ChatBot />
         </GlobalContextProvider>
   )
 }
